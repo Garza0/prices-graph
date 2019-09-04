@@ -1,0 +1,33 @@
+.bars {
+    display: flex;
+    align-items: flex-end;
+    background: grey;
+    height: 300px;
+    padding-top: 30px;
+}
+
+.bar {
+    flex:1;
+    height: 10%;
+    background: #b0b333;
+    position: relative;
+    margin: 0px 18px 20px 8px;
+}
+
+.bar>b:first-child {
+    position: absolute;
+    top: -20px;
+    width: 100%;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+.name {
+    position: absolute;
+    bottom: -18px;
+    width: 100%;
+    text-align: center;
+}
