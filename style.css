@@ -9,14 +9,14 @@
 .bar {
     flex:1;
     height: 10%;
-    background: #b0b333;
+    background:rgb(173, 194, 219);
     position: relative;
     margin: 0px 18px 20px 8px;
-}
-
-.trans>.bar {
     transition: all 2s ease-in-out;
 }
+
+
+
 
 .bar>b:first-child {
     position: absolute;
@@ -24,6 +24,12 @@
     width: 100%;
     text-align: center;
     color: white;
+    transition: all 2s;
+    opacity: 0;
+}
+
+.opaque b:first-child  {
+    opacity: 1;
 }
 
 h3 {

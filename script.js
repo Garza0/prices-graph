@@ -28,20 +28,28 @@ onload = () => {
     setBars(percentagesStart)
 
 
-    setTimeout(() => {
-        setBars(percentages)
-        document.querySelector('.bars').classList.add('trans') 
-    }, 2000)
+   
+    onscroll = function() {
+        if (document.querySelector('.bars').getBoundingClientRect().top < innerHeight || 
+        document.querySelector('.bars').getBoundingClientRect().top > -300) {
+            document.querySelector('.bars').classList.add('opaque') 
+            setBars(percentages)
+            
+        }
+        else {
+            setBars([rnd(), rnd(), rnd(), rnd(), rnd(), rnd(), rnd(), rnd()])
+            document.querySelector('.bars').classList.remove('opaque') 
+        } 
+    }
     
-
     function setBars(percentages) {
         bars.forEach((bar, i) => {
           
             bar.style.height = percentages[i] * 2.6 + '%'
-            bar.style.background = `hsl(213, 39%, ${76 - percentages[i]}%)`
+            bar.style.background = `hsl(213, 39%, ${80 - percentages[i]}%)`
         })
     }
-
+     
     
         
 }
