@@ -30,7 +30,7 @@ onload = () => {
 
    
     onscroll = function() {
-        if (document.querySelector('.bars').getBoundingClientRect().top < innerHeight || 
+        if (document.querySelector('.bars').getBoundingClientRect().top < innerHeight && 
         document.querySelector('.bars').getBoundingClientRect().top > -300) {
             document.querySelector('.bars').classList.add('opaque') 
             setBars(percentages)
